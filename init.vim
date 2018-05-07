@@ -11,10 +11,11 @@ Plug 'pangloss/vim-javascript'
 Plug 'joukevandermaas/vim-ember-hbs'
 Plug 'simeji/winresizer'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'terryma/vim-smooth-scroll'
+Plug 'yonchu/accelerated-smooth-scroll'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/syntastic'
 Plug 'pseewald/vim-anyfold'
+Plug 'ivanov/vim-ipython'
 Plug 'blakjak44/nvim'
 
 " Unmanaged
@@ -94,6 +95,10 @@ nnoremap <leader>l <C-W>l
 nnoremap <leader>j <C-W>j
 nnoremap <leader>k <C-W>k
 nnoremap <leader>h <C-W>h
+
+" JSON formatting
+com! FormatJSON %!python -c "import json, sys, collections; print json.dumps(json.load(sys.stdin, object_pairs_hook=collections.OrderedDict), indent=2)"
+nnoremap <leader>F :FormatJSON<ENTER>:%s/\s\+$//e<ENTER>
 
 " Terminal emulator
 tnoremap <Esc> <C-\><C-n>
