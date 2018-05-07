@@ -15,7 +15,7 @@ Plug 'terryma/vim-smooth-scroll'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/syntastic'
 Plug 'pseewald/vim-anyfold'
-Plug 'blakjak44/syntax'
+Plug 'blakjak44/nvim'
 
 " Unmanaged
 Plug '~/.config/nvim/plugged/YouCompleteMe'
@@ -131,7 +131,7 @@ if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
 endif
 
-" Added by me, JZ
+" Highlight python operators
 autocmd Filetype python syn match pythonExtraOperator     "\%([~!^&|*/%+-]\|\%(class\s*\)\@<!<<\|<=>\|<=\|\%(<\|\<class\s\+\u\w*\s*\)\@<!<[^<]\@=\|===\|==\|=\~\|>>\|>=\|=\@<!>\|\*\*\|\.\.\.\|\.\.\|::\|=\)"
 
 
