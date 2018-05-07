@@ -30,6 +30,8 @@ let python_highlight_all = 1
 set nu
 set mouse=a
 set cursorline
+set splitbelow
+set splitright
 set backspace=indent,eol,start
 highlight Normal ctermfg=White
 highlight ColorColumn ctermbg=235 guibg=#2c2d27
@@ -78,8 +80,8 @@ vnoremap <leader>i "*y
 noremap <leader>p "*p
 
 " Smooth scroll mapping
-noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 1)<CR>
-noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 1)<CR>
+"noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 1)<CR>
+"noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 1)<CR>
 
 " Shift lines down by 1
 noremap U O<ESC>
@@ -92,6 +94,12 @@ nnoremap <leader>l <C-W>l
 nnoremap <leader>j <C-W>j
 nnoremap <leader>k <C-W>k
 nnoremap <leader>h <C-W>h
+
+" Terminal emulator
+tnoremap <Esc> <C-\><C-n>
+tnoremap <leader>k <C-\><C-W>k
+tnoremap <leader>j <C-\><C-W>
+nnoremap <C-t> :split<ENTER>:term ipython --pylab<ENTER>:resize 10<ENTER>i
 
 " Add spaces after comment delimiters by default
 "let g:NERDSpaceDelims = 1
@@ -133,7 +141,6 @@ endif
 
 " Highlight python operators
 autocmd Filetype python syn match pythonExtraOperator     "\%([~!^&|*/%+-]\|\%(class\s*\)\@<!<<\|<=>\|<=\|\%(<\|\<class\s\+\u\w*\s*\)\@<!<[^<]\@=\|===\|==\|=\~\|>>\|>=\|=\@<!>\|\*\*\|\.\.\.\|\.\.\|::\|=\)"
-
 
 autocmd Filetype python setlocal ts=4 sts=4 sw=4 expandtab autoindent
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab autoindent
