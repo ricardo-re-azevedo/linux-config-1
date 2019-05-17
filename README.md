@@ -1,6 +1,7 @@
 # nvim
 
 <b>Use:</b><br>
+``sudo apt-get install neovim``
 ``mkdir .config/nvim``<br>
 ``curl -L https://raw.githubusercontent.com/blakjak44/nvim/master/init.vim > ~/.config/nvim/init.vim``<br>
 ``curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
