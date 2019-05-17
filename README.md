@@ -1,7 +1,7 @@
 # fish
 ``sudo apt-add-repository ppa:fish-shell/release-3``<br>
 ``sudo apt-get update``<br>
-``sudo apt-get install fish`<br>
+``sudo apt-get install fish``<br>
 
 # nvim
 
