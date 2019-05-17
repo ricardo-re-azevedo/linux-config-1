@@ -16,4 +16,5 @@
 ``cd YouCompleteMe``<br>
 ``git submodule update --init --recursive``<br>
 ``sudo apt install nodejs npm``<br>
+``sudo apt-get install cmake``<br>
 ``python3 install.py --clang-completer --ts-completer``<br>
